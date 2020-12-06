@@ -1,6 +1,11 @@
 Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
 
 # Poor practice 1
-Uploading the secret recipes using cp instead of scp.
+SG 'WebAppSG' allows ingress traffic on ports 22, 80, and 5000.
 
 # Poor practice 2
+Web service has access to all S3-storages. Therefore, we 
+
+# Poor practice #3
+No encryption on S3-storage at all.
+
