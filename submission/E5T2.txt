@@ -1,46 +1,42 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
-* Regula
-* Checkov
-- CloudFormation Template Scanner - https://www.cloudconformity.com/solutions/aws/cloudformation-template-scanner.html
-- Cloudsploit - https://cloudsploit.com/cloudformation
-- Cfripper - https://github.com/Skyscanner/cfripper
-
-
+* Regula - https://github.com/fugue/regula
+* Checkov - https://www.checkov.io/
+* CloudFormation Template Scanner - https://www.cloudconformity.com/solutions/aws/cloudformation-template-scanner.html
+* Cloudsploit - https://cloudsploit.com/cloudformation
+* Cfripper - https://github.com/Skyscanner/cfripper
 
 ### Example vulnerability
-* Configuration of very permissive security groups
-* Change in the encryption of a database
-* Wrong assignment to AWS Role on a resource
+* Security group configurations
+* Database encryption
+* AWS Role assignments on resources
+
 
 
 ## Scan AMI’s or containers for OS vulnerabilities
-* Amazon ECR image scanning
-* Clair
-* (`docker scan`)
-
+* Amazon ECR image scanning - https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html
+* Clair - https://github.com/quay/clair
+* 'docker scan' via Snyk - https://snyk.io/
 
 ### Example vulnerability
-* Amazon ECR uses the Common Vulnerabilities and Exposures DB
-- Libraries outdates vulnerabilities
-- OS outated version vulnerabilities
-- Permissive system configurations for outside connections
+* Amazon ECR uses the Common Vulnerabilities and Exposures database
+* Outdated libraries
+* Outdated OS (e.g. outdated kernels)
+* System configurations which permit unwanted egress traffic
+
 
 ## Scan an AWS environment for cloud configuration vulnerabilities
-* AWS config
-- AWS inspector
-- AWS Config
-- AWS Security Hub
-- Cloudwatch alarms
-- Cloudtrail
-- AWS Guard Duty
-
+* AWS Config - https://aws.amazon.com/config/
+* AWS Inspector - https://aws.amazon.com/inspector/
+* AWS Security Hub - https://aws.amazon.com/security-hub/
+* Cloudwatch Alarms - https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html
+* Cloudtrail - https://aws.amazon.com/cloudtrail/
+* AWS Guard Duty - https://aws.amazon.com/guardduty/
 
 ### Example vulnerability
 * No encryption in S3 buckets
-- Instances configured to allow users to log in with root credentials over SSH, without having to use a command authenticated by a public key.
-- Accounts without MFA policies
-- Very permissive IAM Policies or Roles
-- Credentials without rotation policies
-- Poor password rules
+* Port 22 open (SSH) on compute instances
+* Lack of Multi-Factor-Authentification (MFA)
+* Very permissive IAM Policies or Roles
+* Poor practices for password (weak passwords, lack of policies such as regular rotation)

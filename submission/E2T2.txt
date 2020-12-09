@@ -6,5 +6,5 @@ Research and analyze which of the vulnerabilities appear to be related to the co
 * Manage EC2 instance by AWS Systems Manager
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
-* Enable encryption on all S3 buckets and EBS
-* Create IAM role to allow access to EC2-instances through AWS Session Manager
+* Encryption on all S3 buckets and EBS
+* Allow access to EC2-instances through AWS Session Manager by creating appropriate IAM roles

@@ -4,7 +4,7 @@ Based on the architecture diagram, and the steps you have taken so far to upload
 SG 'WebAppSG' allows ingress traffic on ports 22, 80, and 5000.
 
 # Poor practice 2
-Web service has access to all S3-storages. Therefore, we 
+Web service has access to all S3-storages. Therefore, we need to assign more appropriate IAM-roles to specify access.
 
 # Poor practice #3
 No encryption on S3-storage at all.
